@@ -1,6 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
+interface Card {
+  label: string;
+  value: number;
+}
+
 @Component({
   selector: 'app-bloco-cards',
   standalone: true,
@@ -9,6 +14,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './bloco-cards.component.scss',
 })
 export class BlocoCardsComponent {
-  @Input() title!: string;
-  @Input() cards!: { label: string; value: number }[];
+  @Input() title: string = ''; 
+  @Input() cards: Card[] = [];
 }

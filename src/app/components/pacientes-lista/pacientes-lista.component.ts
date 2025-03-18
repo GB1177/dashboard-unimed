@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Paciente } from '../../core/models/pacientes/pacientes.model';
+import { PacientesService } from '../../core/services/pacientes-service/pacientes.serice';
 
 @Component({
   selector: 'app-pacientes-lista',
@@ -8,43 +10,14 @@ import { Component } from '@angular/core';
   templateUrl: './pacientes-lista.component.html',
   styleUrl: './pacientes-lista.component.scss',
 })
-export class PacientesListaComponent {
-  pacientes = [
-    {
-      carteirinha: '123456',
-      nome: 'João Silva',
-      idade: 45,
-      sexo: 'M',
-      cid: 'J18',
-      procedimento: 'Consulta',
-      status: 'Ativo',
-    },
-    {
-      carteirinha: '654321',
-      nome: 'Maria Souza',
-      idade: 38,
-      sexo: 'F',
-      cid: 'E11',
-      procedimento: 'Exame',
-      status: 'Pendente',
-    },
-    {
-      carteirinha: '789012',
-      nome: 'Carlos Mendes',
-      idade: 50,
-      sexo: 'M',
-      cid: 'I10',
-      procedimento: 'Internação',
-      status: 'Internado',
-    },
-    {
-      carteirinha: '345678',
-      nome: 'Ana Lima',
-      idade: 29,
-      sexo: 'F',
-      cid: 'K21',
-      procedimento: 'Cirurgia',
-      status: 'Aguardando',
-    },
-  ];
+export class PacientesListaComponent implements OnInit {
+  pacientes: Paciente[] = [];
+
+  constructor(private pacientesService: PacientesService) {}
+
+  ngOnInit(): void {
+    this.pacientesService.getPacientes().subscribe((data) => {
+      this.pacientes = data;
+    });
+  }
 }

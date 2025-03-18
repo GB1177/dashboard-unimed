@@ -36,25 +36,62 @@ h3 {
   tr:hover {
     background-color: #00995d;
     color: white;
+
+    td {
+      color: white !important;
+    }
+
+    .status-badge {
+      color: white !important;
+    }
   }
 }
 
-.ativo {
-  color: #00995d;
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
   font-weight: bold;
+}
+
+.ativo {
+  background-color: #00995d;
+  color: white;
 }
 
 .pendente {
-  color: #FFA500;
-  font-weight: bold;
+  background-color: #FFA500;
+  color: white;
 }
 
 .internado {
-  color: #D9534F;
-  font-weight: bold;
+  background-color: #D9534F;
+  color: white;
 }
 
 .aguardando {
-  color: #007BFF;
-  font-weight: bold;
+  background-color: #007BFF;
+  color: white;
+}
+
+tr:hover {
+  .ativo {
+    background-color: #41c490;
+    color: white;
+  }
+
+  .pendente {
+    background-color: #FFB733;
+    color: white;
+  }
+
+  .internado {
+    background-color: #E06A64;
+    color: white;
+  }
+
+  .aguardando {
+    background-color: #3399FF;
+    color: white;
+  }
 }

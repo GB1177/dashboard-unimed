@@ -1,13 +1,13 @@
 .card {
-  width: 100%; // Garante que ocupa toda a largura do container pai
-  max-width: 1200px; // Mantém alinhado
-  margin: 0 auto 1rem auto; // Centraliza na tela
+  width: 100%; 
+  max-width: 1200px;
+  margin: 0 auto 1rem auto;
   margin-top: 1rem;
   border: none;
-  padding: 0; // Removendo padding para evitar o efeito de espaçamento extra
-  box-sizing: border-box; // Evita que bordas e padding afetem o tamanho total
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); // Efeito de sombra realista
-  border-radius: 8px; // Mantém o design arredondado
+  padding: 0;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 
   i{
     padding: 0.5rem;
@@ -21,7 +21,7 @@
   width: 100%;
   padding: 1rem;
   background-color: #C0D9CE;
-  border-radius: 8px; 
+  border-radius: 8px;
 
 .hospital-dropdown {
   cursor: pointer;

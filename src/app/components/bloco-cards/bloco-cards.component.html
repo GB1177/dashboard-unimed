@@ -1,6 +1,6 @@
 <div class="bloco-card">
-  <h3>{{ title }}</h3>
-  <div class="cards-container">
+  <h3 *ngIf="title">{{ title }}</h3>
+  <div class="cards-container" *ngIf="cards.length">
     <div class="card" *ngFor="let card of cards">
       <span class="label">{{ card.label }}</span>
       <span class="value">{{ card.value }}</span>

@@ -1,6 +1,7 @@
 <div class="pacientes-container">
   <h3>Lista de Pacientes</h3>
-  <table class="pacientes-table">
+
+  <table class="pacientes-table" *ngIf="pacientes.length">
     <thead>
       <tr>
         <th>Carteirinha</th>
@@ -20,7 +21,11 @@
         <td>{{ paciente.sexo }}</td>
         <td>{{ paciente.cid }}</td>
         <td>{{ paciente.procedimento }}</td>
-        <td [class]="paciente.status.toLowerCase()">{{ paciente.status }}</td>
+        <td>
+          <span class="status-badge {{ paciente.status | lowercase }}">
+            {{ paciente.status }}
+          </span>
+        </td>
       </tr>
     </tbody>
   </table>
