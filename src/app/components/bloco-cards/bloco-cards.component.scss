@@ -1,0 +1,55 @@
+.bloco-card {
+  background-color: #C0D9CE;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 36.1rem;
+  max-width: 50rem;
+  margin: auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  h3 {
+    text-align: center;
+    color: #E7F3E7;
+    margin-bottom: 1rem;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    .card {
+      background-color: #E7F3E7;
+      padding: 1rem;
+      border-radius: 5px;
+      text-align: left; 
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+
+      .label {
+        display: block; // Mantém o label separado do número
+        font-size: 1rem;
+        color: #333;
+      }
+
+      .value {
+        font-size: 1.5rem; // Destaca o número
+        font-weight: bold; // Deixa o número em negrito
+        color: #000; // Preto padrão
+      }
+
+      &:hover {
+        background-color: #00995D;
+        color: white;
+
+        .value, .label {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+

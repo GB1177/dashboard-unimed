@@ -1,0 +1,28 @@
+<div class="card">
+  <header class="app-dashboard-hospitais d-flex justify-content-between align-items-center px-4 py-2">
+    <div class="dropdown d-flex align-items-center">
+      <i class="bi bi-hospital"></i>
+      <button class="btn dropdown-toggle hospital-dropdown" type="button" id="dropdownHospital"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        Selecionar hospital
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownHospital">
+        <li><a class="dropdown-item" href="#">Hospital 1</a></li>
+        <li><a class="dropdown-item" href="#">Hospital 2</a></li>
+        <li><a class="dropdown-item" href="#">Hospital 3</a></li>
+      </ul>
+    </div>
+
+    <div class="d-flex align-items-center">
+      <i class="bi bi-globe"></i>
+      <span class="filter-text">Mostrando todos</span>
+    </div>
+  </header>
+</div>
+
+<div class="dashboard-container">
+  <app-bloco-cards [cards]="blocoEsquerdo.cards"></app-bloco-cards>
+  <app-bloco-cards [cards]="blocoDireito.cards"></app-bloco-cards>
+</div>
+
+<app-pacientes-lista></app-pacientes-lista>

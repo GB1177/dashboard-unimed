@@ -1,0 +1,79 @@
+.card {
+  width: 100%; // Garante que ocupa toda a largura do container pai
+  max-width: 1200px; // Mantém alinhado
+  margin: 0 auto 1rem auto; // Centraliza na tela
+  margin-top: 1rem;
+  border: none;
+  padding: 0; // Removendo padding para evitar o efeito de espaçamento extra
+  box-sizing: border-box; // Evita que bordas e padding afetem o tamanho total
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); // Efeito de sombra realista
+  border-radius: 8px; // Mantém o design arredondado
+
+  i{
+    padding: 0.5rem;
+  }
+}
+
+.app-dashboard-hospitais {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; // Faz com que o header ocupe toda a largura do card
+  padding: 1rem;
+  background-color: #C0D9CE;
+  border-radius: 8px; // Mantém o design arredondado
+
+.hospital-dropdown {
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #E7F3E7;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #00995D;
+    color: white;
+  }
+}
+
+.dropdown-menu {
+  .dropdown-item {
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: #00995D;
+      color: white;
+    }
+  }
+}
+
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+
+  app-bloco-cards {
+    flex: 1;
+    max-width: 48%;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+
+    app-bloco-cards {
+      max-width: 100%;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,27 @@
+<div class="pacientes-container">
+  <h3>Lista de Pacientes</h3>
+  <table class="pacientes-table">
+    <thead>
+      <tr>
+        <th>Carteirinha</th>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Sexo</th>
+        <th>CID</th>
+        <th>Procedimento</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let paciente of pacientes">
+        <td>{{ paciente.carteirinha }}</td>
+        <td>{{ paciente.nome }}</td>
+        <td>{{ paciente.idade }}</td>
+        <td>{{ paciente.sexo }}</td>
+        <td>{{ paciente.cid }}</td>
+        <td>{{ paciente.procedimento }}</td>
+        <td [class]="paciente.status.toLowerCase()">{{ paciente.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

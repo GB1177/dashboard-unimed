@@ -1,0 +1,9 @@
+<div class="bloco-card">
+  <h3>{{ title }}</h3>
+  <div class="cards-container">
+    <div class="card" *ngFor="let card of cards">
+      <span class="label">{{ card.label }}</span>
+      <span class="value">{{ card.value }}</span>
+    </div>
+  </div>
+</div>

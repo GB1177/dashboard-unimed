@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+$primary-color: #00995D;
+$secondary-color: #E7F3E7;
+$background-color: #E7F3E7;
+$text-color: #333;
+
+:root {
+  --bs-primary: #{$primary-color};
+  --bs-body-bg: #{$background-color};
+  --bs-dropdown-bg: #ffffff;
+  --bs-dropdown-link-hover-bg: #E7F3E7;
+}
+
+body {
+  background-color: var(--bs-body-bg);
+  color: $text-color;
+}

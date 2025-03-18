@@ -1,0 +1,60 @@
+.pacientes-container {
+  background-color: #C0D9CE;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+h3 {
+  text-align: center;
+  color: #00995d;
+  margin-bottom: 1rem;
+}
+
+.pacientes-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #E7F3E7;
+  border-radius: 8px;
+  overflow: hidden;
+
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #C0D9CE;
+  }
+
+  th {
+    background-color: #00995d;
+    color: white;
+  }
+
+  tr:hover {
+    background-color: #00995d;
+    color: white;
+  }
+}
+
+.ativo {
+  color: #00995d;
+  font-weight: bold;
+}
+
+.pendente {
+  color: #FFA500;
+  font-weight: bold;
+}
+
+.internado {
+  color: #D9534F;
+  font-weight: bold;
+}
+
+.aguardando {
+  color: #007BFF;
+  font-weight: bold;
+}
