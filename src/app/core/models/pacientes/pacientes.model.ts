@@ -1,9 +1,15 @@
 export interface Paciente {
-  carteirinha: string;
-  nome: string;
-  idade: number;
-  sexo: 'M' | 'F';
+  codigo: string;
+  hospital: string;
+  carteiraConvenio: string;
+  nomePaciente: string;
+  dataInternacao: Date | null;
+  altaInternacao: Date | null;
+  especialidade: string;
   cid: string;
-  procedimento: string;
-  status: 'Ativo' | 'Pendente' | 'Internado' | 'Aguardando';
+  dataAvaliacaoInicial: Date | null;
+  responsavelAvaliacaoInicial: string;
+  inconformidades: string;
+  visitas: string;
+  leitos: string;
 }

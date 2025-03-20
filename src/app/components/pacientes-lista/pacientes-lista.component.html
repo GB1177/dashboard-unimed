@@ -4,28 +4,30 @@
   <table class="pacientes-table" *ngIf="pacientes.length">
     <thead>
       <tr>
-        <th>Carteirinha</th>
+        <th>Código</th>
+        <th>Hospital</th>
+        <th>Carteira Convênio</th>
         <th>Nome</th>
-        <th>Idade</th>
-        <th>Sexo</th>
+        <th>Data Internação</th>
+        <th>Alta</th>
+        <th>Especialidade</th>
         <th>CID</th>
-        <th>Procedimento</th>
-        <th>Status</th>
+        <th>Responsável Avaliação</th>
+        <th>Leitos</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let paciente of pacientes">
-        <td>{{ paciente.carteirinha }}</td>
-        <td>{{ paciente.nome }}</td>
-        <td>{{ paciente.idade }}</td>
-        <td>{{ paciente.sexo }}</td>
+        <td>{{ paciente.codigo }}</td>
+        <td>{{ paciente.hospital }}</td>
+        <td>{{ paciente.carteiraConvenio }}</td>
+        <td>{{ paciente.nomePaciente }}</td>
+        <td>{{ paciente.dataInternacao | date:'dd/MM/yyyy' }}</td>
+        <td>{{ paciente.altaInternacao | date:'dd/MM/yyyy' }}</td>
+        <td>{{ paciente.especialidade }}</td>
         <td>{{ paciente.cid }}</td>
-        <td>{{ paciente.procedimento }}</td>
-        <td>
-          <span class="status-badge {{ paciente.status | lowercase }}">
-            {{ paciente.status }}
-          </span>
-        </td>
+        <td>{{ paciente.responsavelAvaliacaoInicial }}</td>
+        <td>{{ paciente.leitos }}</td>
       </tr>
     </tbody>
   </table>
