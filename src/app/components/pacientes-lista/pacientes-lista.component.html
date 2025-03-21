@@ -1,34 +1,36 @@
 <div class="pacientes-container">
   <h3>Lista de Pacientes</h3>
 
-  <table class="pacientes-table" *ngIf="pacientes.length">
-    <thead>
-      <tr>
-        <th>Código</th>
-        <th>Hospital</th>
-        <th>Carteira Convênio</th>
-        <th>Nome</th>
-        <th>Data Internação</th>
-        <th>Alta</th>
-        <th>Especialidade</th>
-        <th>CID</th>
-        <th>Responsável Avaliação</th>
-        <th>Leitos</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let paciente of pacientes">
-        <td>{{ paciente.codigo }}</td>
-        <td>{{ paciente.hospital }}</td>
-        <td>{{ paciente.carteiraConvenio }}</td>
-        <td>{{ paciente.nomePaciente }}</td>
-        <td>{{ paciente.dataInternacao | date:'dd/MM/yyyy' }}</td>
-        <td>{{ paciente.altaInternacao | date:'dd/MM/yyyy' }}</td>
-        <td>{{ paciente.especialidade }}</td>
-        <td>{{ paciente.cid }}</td>
-        <td>{{ paciente.responsavelAvaliacaoInicial }}</td>
-        <td>{{ paciente.leitos }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="pacientes-table-container">
+    <table class="pacientes-table" *ngIf="pacientes.length">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Hospital</th>
+          <th>Carteira Convênio</th>
+          <th>Nome</th>
+          <th>Data Internação</th>
+          <th>Alta</th>
+          <th>Especialidade</th>
+          <th>CID</th>
+          <th>Responsável Avaliação</th>
+          <th>Leitos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let paciente of pacientes">
+          <td>{{ paciente.codigo }}</td>
+          <td>{{ paciente.hospital }}</td>
+          <td>{{ paciente.carteiraConvenio }}</td>
+          <td>{{ paciente.nomePaciente }}</td>
+          <td>{{ paciente.dataInternacao | date:'dd/MM/yyyy' }}</td>
+          <td>{{ paciente.altaInternacao | date:'dd/MM/yyyy' }}</td>
+          <td>{{ paciente.especialidade }}</td>
+          <td>{{ paciente.cid }}</td>
+          <td>{{ paciente.responsavelAvaliacaoInicial }}</td>
+          <td>{{ paciente.leitos }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
